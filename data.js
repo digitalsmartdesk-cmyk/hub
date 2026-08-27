@@ -8,8 +8,8 @@ const CATEGORIES = [
       { name: "Organic Cabana",  url: "https://organiccabana.growthoriginator.in",          domain: "organiccabana.growthoriginator.in" },
       { name: "Healthy Mijo",    url: "https://healthymijo.growthoriginator.in",            domain: "healthymijo.growthoriginator.in" },
       { name: "Tropico Nuts",    url: "https://tropiconuts.vercel.app/",                    domain: "tropiconuts.vercel.app" },
-      { name: "Cafe Firo",       url: "https://cafefiro.tenskywholesale.com/CafeFiro.html", domain: "cafefiro.tenskywholesale.com" },
-      { name: "Farm Puro",       url: "https://farmpuro.tenskywholesale.com/",              domain: "farmpuro.tenskywholesale.com" },
+      { name: "Cafe Firo",       url: "https://cafefiro.growthoriginator.in/",              domain: "cafefiro.growthoriginator.in" },
+      { name: "Farm Puro",       url: "https://farmpuro.growthoriginator.in/",              domain: "farmpuro.growthoriginator.in" },
     ]
   },
   {
@@ -65,10 +65,12 @@ const CATEGORIES = [
   {
     name: "Creative & Arts", color: "oklch(0.72 0.16 15)",
     links: [
-      { name: "Soulvani Music", url: "http://soulvanimusic.com/",                                 domain: "soulvanimusic.com" },
-      { name: "Flawed Frame",   url: "https://vrvgupta-dotcom.github.io/flawedframe/index.html",  domain: "vrvgupta-dotcom.github.io" },
+      { name: "Soulvani Music", url: "https://albums.soulvanimusic.com/",                          domain: "albums.soulvanimusic.com" },
+      { name: "Flawed Frame",   url: "https://flawedframe.vikasgupta.world/",                      domain: "flawedframe.vikasgupta.world" },
       { name: "Cadence",        url: "https://cadence-five-zeta.vercel.app/portrait",              domain: "cadence-five-zeta.vercel.app" },
-      { name: "Solitude Ink",   url: "https://solitudeink.vercel.app/",                            domain: "solitudeink.vercel.app" },
+      { name: "Solitude Ink",   url: "https://solitudeink.yatendrachandra.in/",                    domain: "solitudeink.yatendrachandra.in" },
+      { name: "TSOHC",          url: "https://tsohc.yatendrachandra.in/",                          domain: "tsohc.yatendrachandra.in" },
+      { name: "Author — Vikas", url: "https://author.vikasgupta.world/",                           domain: "author.vikasgupta.world" },
     ]
   },
 ];
