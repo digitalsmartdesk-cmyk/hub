@@ -22,7 +22,7 @@ a:hover { color: inherit; }
   animation: fadeUp 0.45s ease both;
 }
 
-.hero { margin-bottom: 44px; }
+.hero { margin-bottom: 36px; }
 
 .eyebrow {
   font-size: 11px;
@@ -30,59 +30,105 @@ a:hover { color: inherit; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: oklch(0.7 0.15 145);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
-  font-size: clamp(26px, 3.5vw, 46px);
+  font-size: clamp(24px, 3vw, 42px);
   font-weight: 700;
   letter-spacing: -0.025em;
   color: #fff;
   line-height: 1.1;
 }
 
+/* Tab bar */
+.tab-bar-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 40px;
+}
+
 .tab-bar {
   display: flex;
-  gap: 4px;
-  background: #0f0f13;
-  border: 1px solid #1c1c24;
-  border-radius: 12px;
-  padding: 4px;
-  margin-bottom: 40px;
-  width: fit-content;
+  border-bottom: 1px solid #1c1c24;
+  min-width: max-content;
 }
 
 .tab-btn {
-  padding: 9px 22px;
-  border-radius: 9px;
+  padding: 10px 18px;
   border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #3a3a52;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  letter-spacing: 0.01em;
+  white-space: nowrap;
   transition: all 0.15s ease;
-  background: transparent;
-  color: #3a3a52;
-  box-shadow: none;
+  margin-bottom: -1px;
 }
 
 .tab-btn.active {
-  background: #1e1e28;
   color: #e8e8f0;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  border-bottom-color: oklch(0.7 0.15 145);
 }
 
+/* Section header (category / social channels / directory groups) */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #18181f;
+}
+
+.section-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-count {
+  font-size: 10px;
+  color: #32323e;
+  font-weight: 600;
+  background: #141418;
+  padding: 1px 8px;
+  border-radius: 20px;
+}
+
+.mini-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #32323e;
+  margin-bottom: 12px;
+}
+
+.mini-label-tight { margin-bottom: 10px; }
+
+/* Person header */
 .person-head {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .person-avatar {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -99,58 +145,61 @@ a:hover { color: inherit; }
 }
 
 .person-name {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: #fff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .person-domain {
   font-size: 11px;
   color: #3a3a48;
   margin-top: 2px;
+  font-family: monospace;
 }
+
+.person-section { margin-bottom: 32px; }
 
 .category { margin-bottom: 44px; }
 
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #18181f;
-}
-
-.category-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.category-name {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.category-count {
-  font-size: 11px;
-  color: #32323e;
-  font-weight: 600;
-  background: #141418;
-  padding: 1px 8px;
-  border-radius: 20px;
-}
-
+/* Card grids */
 .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
   gap: 8px;
 }
 
+.website-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px;
+}
+
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 6px;
+}
+
+.email-cell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 6px;
+}
+
+.email-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Brand link card */
 .link-card {
   display: block;
   background: #111115;
@@ -163,6 +212,25 @@ a:hover { color: inherit; }
 }
 
 .link-card:hover {
+  background: #18181f;
+  border-color: #2e2e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Person website card */
+.website-card {
+  display: block;
+  background: #111115;
+  border: 1px solid #1c1c24;
+  border-radius: 10px;
+  padding: 15px 16px 15px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.16s ease;
+}
+
+.website-card:hover {
   background: #18181f;
   border-color: #2e2e3c;
   transform: translateY(-2px);
@@ -202,6 +270,17 @@ a:hover { color: inherit; }
   text-overflow: ellipsis;
 }
 
+.website-card-name {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .link-card-domain {
   display: block;
   font-size: 10.5px;
@@ -212,14 +291,129 @@ a:hover { color: inherit; }
   text-overflow: ellipsis;
 }
 
-.link-icon {
+.link-icon { flex-shrink: 0; margin-top: 2px; }
+.link-icon-md { opacity: 0.35; }
+.link-icon-sm { opacity: 0.3; }
+
+/* Social card */
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #111115;
+  border: 1px solid #1c1c24;
+  border-radius: 8px;
+  padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+.social-card:hover {
+  background: #18181f;
+  border-color: #2e2e3c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.social-card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 8px 0 0 8px;
+}
+
+.social-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 4px;
   flex-shrink: 0;
-  margin-top: 2px;
-  opacity: 0.35;
+  white-space: nowrap;
+}
+
+.social-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c0c0d0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* Domain card (directory) */
+.domain-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111115;
+  border: 1px solid #1c1c24;
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: all 0.15s ease;
+}
+
+.domain-card:hover {
+  background: #18181f;
+  border-color: #2e2e3c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.domain-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8e8f0;
+  font-family: monospace;
+}
+
+/* Email pill (person / brand contact) */
+.email-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111115;
+  border: 1px solid #1c1c24;
+  border-radius: 8px;
+  padding: 9px 14px;
+}
+
+.email-pill-value {
+  font-size: 12px;
+  font-family: monospace;
+  color: #686880;
+}
+
+/* Email cell (directory) */
+.email-cell {
+  background: #111115;
+  border: 1px solid #1c1c24;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.email-cell-label {
+  font-size: 10px;
+  color: #3a3a52;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.email-cell-value {
+  font-size: 12px;
+  font-family: monospace;
+  color: #686880;
 }
 
 .page-footer {
-  margin-top: 8px;
+  margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid #14141a;
   text-align: center;
