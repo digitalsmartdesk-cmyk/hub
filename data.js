@@ -36,6 +36,7 @@ const PEOPLE = {
       { name: "TSOHC",        url: "https://tsohc.yatendrachandra.in/",       domain: "tsohc.yatendrachandra.in" },
       { name: "WOI",          url: "https://woi.yatendrachandra.in/",         domain: "woi.yatendrachandra.in" },
       { name: "Mansi",        url: "https://mansi.yatendrachandra.in/",       domain: "mansi.yatendrachandra.in" },
+      { name: "Home",         url: "https://home.yatendrachandra.in/",        domain: "home.yatendrachandra.in" },
     ],
     social: [
       social("Yatendra Chandra", "https://www.facebook.com/yatendrachandraofficial/", "Facebook"),
@@ -54,6 +55,8 @@ const PEOPLE = {
       { name: "AI Trilogy",    url: "https://aitrilogy.vikasgupta.world/",     domain: "aitrilogy.vikasgupta.world" },
       { name: "Equicore",      url: "https://equicore.vikasgupta.world/",      domain: "equicore.vikasgupta.world" },
       { name: "Employability", url: "https://employability.vikasgupta.world/", domain: "employability.vikasgupta.world" },
+      { name: "Articles",      url: "https://articles.vikasgupta.world/",      domain: "articles.vikasgupta.world" },
+      { name: "DEI",           url: "https://dei.vikasgupta.world/",           domain: "dei.vikasgupta.world" },
     ],
     social: [
       social("Fault Line Ideas", "https://www.instagram.com/faultlineideas/", "Instagram"),
