@@ -138,6 +138,7 @@ const BRAND_CATEGORIES = [
       { name: "Heu Verticals",   url: "https://heuverticals.growthoriginator.in",   domain: "heuverticals.growthoriginator.in" },
       { name: "Nexora",          url: "https://nexora.growthoriginator.in",         domain: "nexora.growthoriginator.in" },
       { name: "Noyora",          url: "https://noyora.growthoriginator.in",         domain: "noyora.growthoriginator.in" },
+      { name: "Akash",           url: "https://akash.growthoriginator.in/",         domain: "akash.growthoriginator.in" },
     ]
   },
   {
@@ -150,10 +151,14 @@ const BRAND_CATEGORIES = [
     ]
   },
   {
-    name: "Events & Lifestyle", color: "oklch(0.72 0.16 15)",
+    name: "Lifestyle & Fashion", color: "oklch(0.72 0.16 15)",
     links: [
-      { name: "Wedding Pass", url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
-      { name: "Cadence",      url: "https://cadence-five-zeta.vercel.app/portrait", domain: "cadence-five-zeta.vercel.app" },
+      { name: "Wedding Pass",   url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
+      { name: "Cadence",        url: "https://cadence-five-zeta.vercel.app/portrait", domain: "cadence-five-zeta.vercel.app" },
+      { name: "Navsaaj",        url: "https://navsaaj.growthoriginator.in/",          domain: "navsaaj.growthoriginator.in" },
+      { name: "Rupanya",        url: "https://rupanya.growthoriginator.in/",          domain: "rupanya.growthoriginator.in" },
+      { name: "Lalitya",        url: "https://lalitya.growthoriginator.in/",          domain: "lalitya.growthoriginator.in" },
+      { name: "Blush Layers",   url: "https://blushlayers.growthoriginator.in/",      domain: "blushlayers.growthoriginator.in" },
     ]
   },
 ];
