@@ -57,6 +57,11 @@ const PEOPLE = {
       { name: "Employability", url: "https://employability.vikasgupta.world/", domain: "employability.vikasgupta.world" },
       { name: "Articles",      url: "https://articles.vikasgupta.world/",      domain: "articles.vikasgupta.world" },
       { name: "DEI",           url: "https://dei.vikasgupta.world/",           domain: "dei.vikasgupta.world" },
+      { name: "Law",          url: "https://law.vikasgupta.world/",          domain: "law.vikasgupta.world" },
+      { name: "Policy",       url: "https://policy.vikasgupta.world/",       domain: "policy.vikasgupta.world" },
+      { name: "Leadership",   url: "https://leadership.vikasgupta.world/",   domain: "leadership.vikasgupta.world" },
+      { name: "Bio",          url: "https://bio.vikasgupta.world/",          domain: "bio.vikasgupta.world" },
+      { name: "Educator",     url: "https://educator.vikasgupta.world/",     domain: "educator.vikasgupta.world" },
     ],
     social: [
       social("Fault Line Ideas", "https://www.instagram.com/faultlineideas/", "Instagram"),
