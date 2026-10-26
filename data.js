@@ -156,6 +156,17 @@ const BRAND_CATEGORIES = [
     ]
   },
   {
+    name: "Public Policy", color: "oklch(0.72 0.16 160)",
+    links: [
+      { name: "Public Policy",             url: "https://publicpolicy.growthoriginator.in/",                      domain: "publicpolicy.growthoriginator.in" },
+      { name: "Rich Country Poor Citizens", url: "https://publicpolicy.growthoriginator.in/rich-country-poor-citizens/", domain: "publicpolicy.growthoriginator.in" },
+      { name: "AI Squeeze",                url: "https://publicpolicy.growthoriginator.in/ai-squeeze/",           domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Book",       url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",      domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Tracker",    url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",   domain: "publicpolicy.growthoriginator.in" },
+      { name: "Money and Seats",           url: "https://publicpolicy.growthoriginator.in/money-and-seats/",      domain: "publicpolicy.growthoriginator.in" },
+    ]
+  },
+  {
     name: "Lifestyle & Fashion", color: "oklch(0.72 0.16 15)",
     links: [
       { name: "Wedding Pass",   url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
