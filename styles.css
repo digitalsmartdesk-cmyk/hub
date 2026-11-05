@@ -1,35 +1,36 @@
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #0b0b0e;
-  color: #e6e6ee;
+  background: #f4f3ef;
+  color: #17171a;
   font-family: 'Space Grotesk', sans-serif;
   min-height: 100vh;
+  animation: fadeUp 0.45s ease both;
 }
 
 a { color: inherit; text-decoration: none; }
 a:hover { color: inherit; }
 
-.page {
+/* ── Dark header ───────────────────────────────────────────── */
+.site-header { background: #0c0c10; }
+
+.header-inner {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 52px 28px 88px;
-  animation: fadeUp 0.45s ease both;
+  padding: 44px 28px 0;
 }
-
-.hero { margin-bottom: 36px; }
 
 .eyebrow {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: oklch(0.7 0.15 145);
+  color: oklch(0.78 0.15 145);
   margin-bottom: 10px;
 }
 
@@ -39,18 +40,20 @@ a:hover { color: inherit; }
   letter-spacing: -0.025em;
   color: #fff;
   line-height: 1.1;
+  margin-bottom: 28px;
 }
 
-/* Tab bar */
+/* ── Tab bar (inside dark header) ─────────────────────────── */
 .tab-bar-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-bottom: 40px;
+  scrollbar-width: none;
 }
+.tab-bar-scroll::-webkit-scrollbar { display: none; }
 
 .tab-bar {
   display: flex;
-  border-bottom: 1px solid #1c1c24;
+  border-bottom: 1px solid #222228;
   min-width: max-content;
 }
 
@@ -59,10 +62,10 @@ a:hover { color: inherit; }
   border: none;
   border-bottom: 2px solid transparent;
   background: transparent;
-  color: #3a3a52;
+  color: #9594a2;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s ease;
@@ -70,18 +73,25 @@ a:hover { color: inherit; }
 }
 
 .tab-btn.active {
-  color: #e8e8f0;
-  border-bottom-color: oklch(0.7 0.15 145);
+  color: #ffffff;
+  border-bottom-color: oklch(0.78 0.15 145);
 }
 
-/* Section header (category / social channels / directory groups) */
+/* ── Content area ─────────────────────────────────────────── */
+.content {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 40px 28px 88px;
+}
+
+/* ── Section header ───────────────────────────────────────── */
 .section-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
   padding-bottom: 14px;
-  border-bottom: 1px solid #18181f;
+  border-bottom: 1px solid #e6e4df;
 }
 
 .section-dot {
@@ -100,9 +110,9 @@ a:hover { color: inherit; }
 
 .section-count {
   font-size: 10px;
-  color: #32323e;
+  color: #9a978f;
   font-weight: 600;
-  background: #141418;
+  background: #eeece7;
   padding: 1px 8px;
   border-radius: 20px;
 }
@@ -112,18 +122,19 @@ a:hover { color: inherit; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #32323e;
+  color: #b5b3ac;
   margin-bottom: 12px;
 }
 
-.mini-label-tight { margin-bottom: 10px; }
+/* ── Person header ────────────────────────────────────────── */
+.person-block { margin-bottom: 44px; }
+.person-section { margin-bottom: 28px; }
 
-/* Person header */
 .person-head {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .person-avatar {
@@ -139,39 +150,34 @@ a:hover { color: inherit; }
   flex-shrink: 0;
 }
 
-.person-meta {
-  display: flex;
-  flex-direction: column;
-}
+.person-meta { display: flex; flex-direction: column; }
 
 .person-name {
   font-size: 19px;
   font-weight: 700;
-  color: #fff;
+  color: #17171a;
   letter-spacing: -0.015em;
 }
 
 .person-domain {
   font-size: 11px;
-  color: #3a3a48;
+  color: #9a978f;
   margin-top: 2px;
   font-family: monospace;
 }
 
-.person-section { margin-bottom: 32px; }
-
 .category { margin-bottom: 44px; }
 
-/* Card grids */
-.link-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
-  gap: 8px;
-}
-
+/* ── Card grids ───────────────────────────────────────────── */
 .website-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
   gap: 8px;
 }
 
@@ -183,46 +189,21 @@ a:hover { color: inherit; }
 
 .domain-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 6px;
 }
 
 .email-cell-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 6px;
 }
 
-.email-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
+.email-row { display: flex; flex-wrap: wrap; gap: 6px; }
 
-/* Brand link card */
-.link-card {
-  display: block;
-  background: #111115;
-  border: 1px solid #1c1c24;
-  border-radius: 10px;
-  padding: 16px 18px 16px 22px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.16s ease;
-}
-
-.link-card:hover {
-  background: #18181f;
-  border-color: #2e2e3c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-}
-
-/* Person website card */
+/* ── Website card (person tabs) ───────────────────────────── */
 .website-card {
   display: block;
-  background: #111115;
-  border: 1px solid #1c1c24;
   border-radius: 10px;
   padding: 15px 16px 15px 20px;
   position: relative;
@@ -231,18 +212,30 @@ a:hover { color: inherit; }
 }
 
 .website-card:hover {
-  background: #18181f;
-  border-color: #2e2e3c;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 20px rgba(20, 20, 10, 0.1);
 }
 
+/* ── Brand link card ──────────────────────────────────────── */
+.link-card {
+  display: block;
+  border-radius: 10px;
+  padding: 16px 18px 16px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.16s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 20, 10, 0.1);
+}
+
+/* shared card internals */
 .link-card-bar {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
   border-radius: 10px 0 0 10px;
 }
 
@@ -250,31 +243,16 @@ a:hover { color: inherit; }
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
 }
 
-.link-card-text {
-  min-width: 0;
-  flex: 1;
-  display: block;
-}
+.link-card-text { min-width: 0; flex: 1; display: block; }
 
 .link-card-name {
   display: block;
   font-size: 13.5px;
   font-weight: 600;
-  color: #e8e8f0;
-  margin-bottom: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.website-card-name {
-  display: block;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #e8e8f0;
+  color: #17171a;
   margin-bottom: 3px;
   white-space: nowrap;
   overflow: hidden;
@@ -284,24 +262,18 @@ a:hover { color: inherit; }
 .link-card-domain {
   display: block;
   font-size: 10.5px;
-  color: #3a3a48;
+  color: #9a978f;
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.link-icon { flex-shrink: 0; margin-top: 2px; }
-.link-icon-md { opacity: 0.35; }
-.link-icon-sm { opacity: 0.3; }
-
-/* Social card */
+/* ── Social card ──────────────────────────────────────────── */
 .social-card {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #111115;
-  border: 1px solid #1c1c24;
   border-radius: 8px;
   padding: 10px 14px;
   position: relative;
@@ -310,19 +282,14 @@ a:hover { color: inherit; }
 }
 
 .social-card:hover {
-  background: #18181f;
-  border-color: #2e2e3c;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 16px rgba(20, 20, 10, 0.08);
 }
 
 .social-card-bar {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  opacity: 0.7;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
   border-radius: 8px 0 0 8px;
 }
 
@@ -339,46 +306,20 @@ a:hover { color: inherit; }
 .social-name {
   font-size: 12px;
   font-weight: 500;
-  color: #c0c0d0;
+  color: #4a4842;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 1;
 }
 
-/* Domain card (directory) */
-.domain-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #111115;
-  border: 1px solid #1c1c24;
-  border-radius: 8px;
-  padding: 14px 16px;
-  transition: all 0.15s ease;
-}
-
-.domain-card:hover {
-  background: #18181f;
-  border-color: #2e2e3c;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.domain-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: #e8e8f0;
-  font-family: monospace;
-}
-
-/* Email pill (person / brand contact) */
+/* ── Email pill ───────────────────────────────────────────── */
 .email-pill {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #111115;
-  border: 1px solid #1c1c24;
+  background: #ffffff;
+  border: 1px solid #e6e4df;
   border-radius: 8px;
   padding: 9px 14px;
 }
@@ -386,42 +327,108 @@ a:hover { color: inherit; }
 .email-pill-value {
   font-size: 12px;
   font-family: monospace;
-  color: #686880;
+  color: #6b6962;
 }
 
-/* Email cell (directory) */
-.email-cell {
-  background: #111115;
-  border: 1px solid #1c1c24;
+/* ── Directory: domain card ───────────────────────────────── */
+.domain-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e6e4df;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 12px 12px 12px 16px;
 }
+
+.domain-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #17171a;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.domain-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+/* ── Directory: email cell ────────────────────────────────── */
+.email-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e6e4df;
+  border-radius: 8px;
+  padding: 11px 12px 11px 16px;
+}
+
+.email-cell-info { min-width: 0; flex: 1; }
 
 .email-cell-label {
   font-size: 10px;
-  color: #3a3a52;
+  color: #b5b3ac;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .email-cell-value {
   font-size: 12px;
   font-family: monospace;
-  color: #686880;
+  color: #6b6962;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* ── Copy / Open buttons ──────────────────────────────────── */
+.copy-btn,
+.open-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #e6e4df;
+  background: #fafaf8;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  flex-shrink: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+.copy-btn:hover:not(.copied),
+.open-btn:hover {
+  border-color: #d4d1ca;
+  background: #f2f1ec;
+}
+
+.copy-btn.copied {
+  background: oklch(0.6 0.15 150);
+  border-color: oklch(0.6 0.15 150);
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
 .page-footer {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1px solid #14141a;
+  border-top: 1px solid #e6e4df;
   text-align: center;
 }
 
 .page-footer p {
   font-size: 10px;
-  color: #1e1e2a;
+  color: #c3c1b9;
   letter-spacing: 0.14em;
   font-weight: 600;
 }

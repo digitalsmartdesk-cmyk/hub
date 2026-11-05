@@ -1,24 +1,28 @@
 // Brand Portfolio Hub — tab, link, social, and contact data.
 
 const TABS = [
-  { id: "yatendra", label: "Yatendra Chandra" },
-  { id: "vikas", label: "Vikas Gupta" },
-  { id: "anant", label: "Anant Deodar" },
-  { id: "shloka", label: "Shloka Svara" },
-  { id: "soulvani", label: "Soulvani Music" },
-  { id: "brands", label: "GrowthOriginator" },
-  { id: "directory", label: "Directory" },
+  { id: "author",    label: "Author" },
+  { id: "vikas",    label: "Vikas Gupta" },
+  { id: "music",    label: "Music" },
+  { id: "education",label: "Education" },
+  { id: "brands",   label: "GrowthOriginator" },
+  { id: "directory",label: "Directory" },
 ];
 
 const DEFAULT_TAB = "brands";
-const PERSON_IDS = ["yatendra", "vikas", "anant", "shloka", "soulvani"];
+
+const TAB_GROUPS = {
+  author: ["yatendra", "anant"],
+  vikas:  ["vikas"],
+  music:  ["shloka", "soulvani"],
+};
 
 const PLATFORMS = {
-  Facebook: { bg: "#12213f", color: "#5b8fff" },
-  Instagram: { bg: "#2a1025", color: "#e06090" },
-  YouTube: { bg: "#2a1010", color: "#ff6060" },
-  Spotify: { bg: "#0a2018", color: "#1db954" },
-  "Apple Music": { bg: "#2a1018", color: "#fc6e7a" },
+  Facebook:    { bg: "#12213f", color: "#3461d6" },
+  Instagram:   { bg: "#2a1025", color: "#c2366b" },
+  YouTube:     { bg: "#2a1010", color: "#d6342f" },
+  Spotify:     { bg: "#0a2018", color: "#19883f" },
+  "Apple Music": { bg: "#2a1018", color: "#c43c4c" },
 };
 
 function social(name, url, platform) {
@@ -29,7 +33,7 @@ function social(name, url, platform) {
 const PEOPLE = {
   yatendra: {
     name: "Yatendra Chandra", initials: "YC",
-    color: "oklch(0.65 0.18 350)", avatarBg: "oklch(0.38 0.18 350)",
+    color: "oklch(0.5 0.17 350)", avatarBg: "oklch(0.5 0.18 350)",
     domain: "yatendrachandra.in",
     websites: [
       { name: "Solitude Ink", url: "https://solitudeink.yatendrachandra.in/", domain: "solitudeink.yatendrachandra.in" },
@@ -45,81 +49,100 @@ const PEOPLE = {
   },
   vikas: {
     name: "Vikas Gupta", initials: "VG",
-    color: "oklch(0.65 0.18 220)", avatarBg: "oklch(0.38 0.18 220)",
+    color: "oklch(0.48 0.17 220)", avatarBg: "oklch(0.5 0.18 220)",
     domain: "vikasgupta.world",
     websites: [
-      { name: "Flawed Frame",  url: "https://flawedframe.vikasgupta.world/",   domain: "flawedframe.vikasgupta.world" },
       { name: "Author",        url: "https://author.vikasgupta.world/",        domain: "author.vikasgupta.world" },
-      { name: "Columnist",     url: "https://columnist.vikasgupta.world/",     domain: "columnist.vikasgupta.world" },
       { name: "AI Impact",     url: "https://aiimpact.vikasgupta.world/",      domain: "aiimpact.vikasgupta.world" },
       { name: "AI Trilogy",    url: "https://aitrilogy.vikasgupta.world/",     domain: "aitrilogy.vikasgupta.world" },
-      { name: "Equicore",      url: "https://equicore.vikasgupta.world/",      domain: "equicore.vikasgupta.world" },
       { name: "Employability", url: "https://employability.vikasgupta.world/", domain: "employability.vikasgupta.world" },
+      { name: "Columnist",     url: "https://columnist.vikasgupta.world/",     domain: "columnist.vikasgupta.world" },
       { name: "Articles",      url: "https://articles.vikasgupta.world/",      domain: "articles.vikasgupta.world" },
-      { name: "DEI",           url: "https://dei.vikasgupta.world/",           domain: "dei.vikasgupta.world" },
-      { name: "Law",          url: "https://law.vikasgupta.world/",          domain: "law.vikasgupta.world" },
-      { name: "Policy",       url: "https://policy.vikasgupta.world/",       domain: "policy.vikasgupta.world" },
-      { name: "Leadership",   url: "https://leadership.vikasgupta.world/",   domain: "leadership.vikasgupta.world" },
-      { name: "Bio",          url: "https://bio.vikasgupta.world/",          domain: "bio.vikasgupta.world" },
-      { name: "Educator",     url: "https://educator.vikasgupta.world/",     domain: "educator.vikasgupta.world" },
+      { name: "Flawed Frame",  url: "https://flawedframe.vikasgupta.world/",   domain: "flawedframe.vikasgupta.world" },
+      { name: "Equicore",      url: "https://equicore.vikasgupta.world/",      domain: "equicore.vikasgupta.world" },
+    ],
+    profileLinks: [
+      { name: "DEI",        url: "https://dei.vikasgupta.world/",        domain: "dei.vikasgupta.world" },
+      { name: "Law",        url: "https://law.vikasgupta.world/",        domain: "law.vikasgupta.world" },
+      { name: "Policy",     url: "https://policy.vikasgupta.world/",     domain: "policy.vikasgupta.world" },
+      { name: "Leadership", url: "https://leadership.vikasgupta.world/", domain: "leadership.vikasgupta.world" },
+      { name: "Bio",        url: "https://bio.vikasgupta.world/",        domain: "bio.vikasgupta.world" },
+      { name: "Educator",   url: "https://educator.vikasgupta.world/",   domain: "educator.vikasgupta.world" },
     ],
     social: [
       social("Fault Line Ideas", "https://www.instagram.com/faultlineideas/", "Instagram"),
-      social("VRV Gupta", "https://www.facebook.com/vrv.gupta/", "Facebook"),
-      social("Fault Line Ideas", "https://www.facebook.com/faultlineideas/", "Facebook"),
+      social("VRV Gupta",        "https://www.facebook.com/vrv.gupta/",       "Facebook"),
+      social("Fault Line Ideas", "https://www.facebook.com/faultlineideas/",  "Facebook"),
     ],
     emails: ["faultlineideas@gmail.com", "equicorepractice@gmail.com"],
   },
   anant: {
     name: "Anant Deodar", initials: "AD",
-    color: "oklch(0.65 0.18 185)", avatarBg: "oklch(0.38 0.18 185)",
+    color: "oklch(0.45 0.15 185)", avatarBg: "oklch(0.5 0.18 185)",
     domain: "anantdeodar.ink",
     websites: [
       { name: "Democracy", url: "https://democracy.anantdeodar.ink/", domain: "democracy.anantdeodar.ink" },
     ],
     social: [
-      social("Anant Deodar", "https://www.facebook.com/anantdeodar/", "Facebook"),
-      social("The Rights Question", "https://www.facebook.com/therightsquestion/", "Facebook"),
-      social("The Rights Question", "https://www.youtube.com/@TheRightsQuestion", "YouTube"),
+      social("Anant Deodar",        "https://www.facebook.com/anantdeodar/",         "Facebook"),
+      social("The Rights Question", "https://www.facebook.com/therightsquestion/",    "Facebook"),
+      social("The Rights Question", "https://www.youtube.com/@TheRightsQuestion",     "YouTube"),
     ],
-    emails: ["anant.deodar@gmail.com", "indiandrc2025@gmail.com"],
+    emails: ["anant.deodar@gmail.com"],
   },
   shloka: {
     name: "Shloka Svara", initials: "SS",
-    color: "oklch(0.65 0.18 290)", avatarBg: "oklch(0.38 0.18 290)",
+    color: "oklch(0.48 0.17 290)", avatarBg: "oklch(0.5 0.18 290)",
     domain: "shlokasvara.com",
     websites: [
       { name: "Shloka Svara", url: "https://start.shlokasvara.com/", domain: "start.shlokasvara.com" },
     ],
     social: [
       social("Shloka Svara", "https://www.facebook.com/ShlokaSvara/", "Facebook"),
-      social("Shloka Svara", "https://www.youtube.com/@ShlokaSvara", "YouTube"),
+      social("Shloka Svara", "https://www.youtube.com/@ShlokaSvara",  "YouTube"),
     ],
     emails: ["shloka.svara@gmail.com"],
   },
   soulvani: {
     name: "Soulvani Music", initials: "♪",
-    color: "oklch(0.65 0.18 40)", avatarBg: "oklch(0.38 0.18 40)",
+    color: "oklch(0.5 0.17 40)", avatarBg: "oklch(0.5 0.18 40)",
     domain: "soulvanimusic.com",
     websites: [
       { name: "Albums", url: "https://albums.soulvanimusic.com/", domain: "albums.soulvanimusic.com" },
       { name: "Listen", url: "https://listen.soulvanimusic.com/", domain: "listen.soulvanimusic.com" },
     ],
     social: [
-      social("Soulvani Music", "https://www.instagram.com/soulvani.music/", "Instagram"),
-      social("Soulvani", "https://www.facebook.com/soulvani/", "Facebook"),
-      social("Listen N Love", "https://www.facebook.com/listennlove1/", "Facebook"),
-      social("SoulVani", "https://www.youtube.com/@SoulVani", "YouTube"),
-      social("Soulvani", "https://open.spotify.com/artist/7DhyDSfyDzUJoaEHMr6jFK", "Spotify"),
-      social("Soulvani", "https://music.apple.com/us/artist/soulvani/1878376351", "Apple Music"),
+      social("Soulvani Music", "https://www.instagram.com/soulvani.music/",               "Instagram"),
+      social("Soulvani",       "https://www.facebook.com/soulvani/",                      "Facebook"),
+      social("Listen N Love",  "https://www.facebook.com/listennlove1/",                  "Facebook"),
+      social("SoulVani",       "https://www.youtube.com/@SoulVani",                       "YouTube"),
+      social("Soulvani",       "https://open.spotify.com/artist/7DhyDSfyDzUJoaEHMr6jFK", "Spotify"),
+      social("Soulvani",       "https://music.apple.com/us/artist/soulvani/1878376351",   "Apple Music"),
     ],
     emails: ["soulvani.music@gmail.com"],
   },
 };
 
+const EDUCATION_COLOR = "oklch(0.5 0.13 262)";
+const EDUCATION_LINKS = [
+  { name: "Quizykoo",        url: "https://quizykoo.growthoriginator.in",                    domain: "quizykoo.growthoriginator.in" },
+  { name: "Quizykoo (Dev)",  url: "https://vrvgupta-dotcom.github.io/quizykoo/#about",       domain: "vrvgupta-dotcom.github.io" },
+  { name: "IMO Tracker App", url: "https://digitalsmartdesk-cmyk.github.io/imotrackerapp/",  domain: "digitalsmartdesk-cmyk.github.io" },
+  { name: "IMO Tracker",     url: "https://imotracker01.vercel.app/login?next=%2Ftests",     domain: "imotracker01.vercel.app" },
+  { name: "Quizykoo",        url: "https://quizykoo.com",                                    domain: "quizykoo.com" },
+  { name: "Quizykoo Online", url: "https://quizykoo.online",                                 domain: "quizykoo.online" },
+  { name: "Quiz Books",      url: "https://quizbooks.quizykoo.com",                          domain: "quizbooks.quizykoo.com" },
+  { name: "Skill Books",     url: "https://skillbooks.quizykoo.com",                         domain: "skillbooks.quizykoo.com" },
+  { name: "Mythokoo",        url: "https://mythokoo.quizykoo.com",                           domain: "mythokoo.quizykoo.com" },
+  { name: "Wonderkoo",       url: "https://wonderkoo.quizykoo.com",                          domain: "wonderkoo.quizykoo.com" },
+  { name: "Champskoo",       url: "https://champskoo.quizykoo.com",                          domain: "champskoo.quizykoo.com" },
+  { name: "Filmykoo",        url: "https://filmykoo.quizykoo.com",                           domain: "filmykoo.quizykoo.com" },
+  { name: "Digital",         url: "https://digital.quizykoo.com",                            domain: "digital.quizykoo.com" },
+];
+
 const BRAND_CATEGORIES = [
   {
-    name: "Food & Wellness", color: "oklch(0.72 0.16 55)",
+    name: "Food & Wellness", color: "oklch(0.52 0.15 55)",
     links: [
       { name: "Yummykeenz",     url: "https://yummykeenz.growthoriginator.in",    domain: "yummykeenz.growthoriginator.in" },
       { name: "Aaharva",        url: "https://aaharva.growthoriginator.in",       domain: "aaharva.growthoriginator.in" },
@@ -132,7 +155,7 @@ const BRAND_CATEGORIES = [
     ]
   },
   {
-    name: "Commerce & Business", color: "oklch(0.72 0.16 230)",
+    name: "Commerce & Business", color: "oklch(0.48 0.13 230)",
     links: [
       { name: "Urban Supermart", url: "https://urbansupermart.growthoriginator.in", domain: "urbansupermart.growthoriginator.in" },
       { name: "D2C Brands",      url: "https://d2cbrands.growthoriginator.in",      domain: "d2cbrands.growthoriginator.in" },
@@ -147,51 +170,42 @@ const BRAND_CATEGORIES = [
     ]
   },
   {
-    name: "Education & Tools", color: "oklch(0.72 0.16 262)",
+    name: "Public Policy", color: "oklch(0.48 0.13 160)",
     links: [
-      { name: "Quizykoo",        url: "https://quizykoo.growthoriginator.in",                   domain: "quizykoo.growthoriginator.in" },
-      { name: "Quizykoo (Dev)",  url: "https://vrvgupta-dotcom.github.io/quizykoo/#about",      domain: "vrvgupta-dotcom.github.io" },
-      { name: "IMO Tracker App", url: "https://digitalsmartdesk-cmyk.github.io/imotrackerapp/", domain: "digitalsmartdesk-cmyk.github.io" },
-      { name: "IMO Tracker",     url: "https://imotracker01.vercel.app/login?next=%2Ftests",    domain: "imotracker01.vercel.app" },
-    ]
-  },
-  {
-    name: "Public Policy", color: "oklch(0.72 0.16 160)",
-    links: [
-      { name: "Public Policy",             url: "https://publicpolicy.growthoriginator.in/",                      domain: "publicpolicy.growthoriginator.in" },
+      { name: "Public Policy",              url: "https://publicpolicy.growthoriginator.in/",                           domain: "publicpolicy.growthoriginator.in" },
       { name: "Rich Country Poor Citizens", url: "https://publicpolicy.growthoriginator.in/rich-country-poor-citizens/", domain: "publicpolicy.growthoriginator.in" },
-      { name: "AI Squeeze",                url: "https://publicpolicy.growthoriginator.in/ai-squeeze/",           domain: "publicpolicy.growthoriginator.in" },
-      { name: "HH Bal Sheet — Book",       url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",      domain: "publicpolicy.growthoriginator.in" },
-      { name: "HH Bal Sheet — Tracker",    url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",   domain: "publicpolicy.growthoriginator.in" },
-      { name: "Money and Seats",           url: "https://publicpolicy.growthoriginator.in/money-and-seats/",      domain: "publicpolicy.growthoriginator.in" },
+      { name: "AI Squeeze",                 url: "https://publicpolicy.growthoriginator.in/ai-squeeze/",                domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Book",        url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",           domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Tracker",     url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",        domain: "publicpolicy.growthoriginator.in" },
+      { name: "Money and Seats",            url: "https://publicpolicy.growthoriginator.in/money-and-seats/",           domain: "publicpolicy.growthoriginator.in" },
     ]
   },
   {
-    name: "Lifestyle & Fashion", color: "oklch(0.72 0.16 15)",
+    name: "Lifestyle & Fashion", color: "oklch(0.52 0.15 15)",
     links: [
-      { name: "Wedding Pass",   url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
-      { name: "Cadence",        url: "https://cadence-five-zeta.vercel.app/portrait", domain: "cadence-five-zeta.vercel.app" },
-      { name: "Navsaaj",        url: "https://navsaaj.growthoriginator.in/",          domain: "navsaaj.growthoriginator.in" },
-      { name: "Rupanya",        url: "https://rupanya.growthoriginator.in/",          domain: "rupanya.growthoriginator.in" },
-      { name: "Lalitya",        url: "https://lalitya.growthoriginator.in/",          domain: "lalitya.growthoriginator.in" },
-      { name: "Blush Layers",   url: "https://blushlayers.growthoriginator.in/",      domain: "blushlayers.growthoriginator.in" },
+      { name: "Wedding Pass", url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
+      { name: "Cadence",      url: "https://cadence-five-zeta.vercel.app/portrait", domain: "cadence-five-zeta.vercel.app" },
+      { name: "Navsaaj",      url: "https://navsaaj.growthoriginator.in/",          domain: "navsaaj.growthoriginator.in" },
+      { name: "Rupanya",      url: "https://rupanya.growthoriginator.in/",          domain: "rupanya.growthoriginator.in" },
+      { name: "Lalitya",      url: "https://lalitya.growthoriginator.in/",          domain: "lalitya.growthoriginator.in" },
+      { name: "Blush Layers", url: "https://blushlayers.growthoriginator.in/",      domain: "blushlayers.growthoriginator.in" },
     ]
   },
 ];
 
 const BRAND_SOCIAL = [
-  social("Quizykoo", "https://www.facebook.com/quizykoo/", "Facebook"),
-  social("Urban Supermart", "https://www.facebook.com/urbansupermart/", "Facebook"),
-  social("Urban Wholesale", "https://www.facebook.com/urbanwholesaleindia/", "Facebook"),
-  social("Noyora", "https://www.facebook.com/noyoraofficial/", "Facebook"),
-  social("Cashout Property", "https://www.facebook.com/cashoutproperty/", "Facebook"),
-  social("Umber Electric", "https://www.facebook.com/umberelectric/", "Facebook"),
-  social("Envomoto", "https://www.facebook.com/envomoto/", "Facebook"),
-  social("GrowthOriginator", "https://www.facebook.com/profile.php?id=100064705879364", "Facebook"),
-  social("Ignite Crest", "https://www.facebook.com/ignitecrest/", "Facebook"),
-  social("Franchise Vista", "https://www.facebook.com/franchisevista/", "Facebook"),
-  social("The Ignite Angels", "https://www.facebook.com/theigniteangels/", "Facebook"),
-  social("Social Impact Vyoo", "https://www.youtube.com/@socialimpactvyoo", "YouTube"),
+  social("Quizykoo",           "https://www.facebook.com/quizykoo/",                       "Facebook"),
+  social("Urban Supermart",    "https://www.facebook.com/urbansupermart/",                  "Facebook"),
+  social("Urban Wholesale",    "https://www.facebook.com/urbanwholesaleindia/",             "Facebook"),
+  social("Noyora",             "https://www.facebook.com/noyoraofficial/",                  "Facebook"),
+  social("Cashout Property",   "https://www.facebook.com/cashoutproperty/",                 "Facebook"),
+  social("Umber Electric",     "https://www.facebook.com/umberelectric/",                   "Facebook"),
+  social("Envomoto",           "https://www.facebook.com/envomoto/",                        "Facebook"),
+  social("GrowthOriginator",   "https://www.facebook.com/profile.php?id=100064705879364",  "Facebook"),
+  social("Ignite Crest",       "https://www.facebook.com/ignitecrest/",                     "Facebook"),
+  social("Franchise Vista",    "https://www.facebook.com/franchisevista/",                   "Facebook"),
+  social("The Ignite Angels",  "https://www.facebook.com/theigniteangels/",                 "Facebook"),
+  social("Social Impact Vyoo", "https://www.youtube.com/@socialimpactvyoo",                 "YouTube"),
 ];
 
 const BRAND_EMAILS = ["landedge.projects@gmail.com", "arthamerge@gmail.com"];
@@ -203,16 +217,17 @@ const DOMAINS = [
   { name: "anantdeodar.ink",     url: "https://anantdeodar.ink" },
   { name: "soulvanimusic.com",   url: "https://soulvanimusic.com" },
   { name: "shlokasvara.com",     url: "https://shlokasvara.com" },
+  { name: "quizykoo.com",        url: "https://quizykoo.com" },
+  { name: "quizykoo.online",     url: "https://quizykoo.online" },
 ];
 
 const ALL_EMAILS = [
-  { label: "Yatendra Chandra",          email: "yatendra.chandra@gmail.com" },
-  { label: "Vikas Gupta — Fault Line",  email: "faultlineideas@gmail.com" },
-  { label: "Vikas Gupta — Equicore",    email: "equicorepractice@gmail.com" },
-  { label: "Anant Deodar",              email: "anant.deodar@gmail.com" },
-  { label: "Anant Deodar — Indian DRC", email: "indiandrc2025@gmail.com" },
-  { label: "Shloka Svara",              email: "shloka.svara@gmail.com" },
-  { label: "Soulvani Music",            email: "soulvani.music@gmail.com" },
-  { label: "Land Edge",                 email: "landedge.projects@gmail.com" },
-  { label: "Artha Merge",               email: "arthamerge@gmail.com" },
+  { label: "Yatendra Chandra",         email: "yatendra.chandra@gmail.com" },
+  { label: "Vikas Gupta — Fault Line", email: "faultlineideas@gmail.com" },
+  { label: "Vikas Gupta — Equicore",   email: "equicorepractice@gmail.com" },
+  { label: "Anant Deodar",             email: "anant.deodar@gmail.com" },
+  { label: "Shloka Svara",             email: "shloka.svara@gmail.com" },
+  { label: "Soulvani Music",           email: "soulvani.music@gmail.com" },
+  { label: "Land Edge",                email: "landedge.projects@gmail.com" },
+  { label: "Artha Merge",              email: "arthamerge@gmail.com" },
 ];
