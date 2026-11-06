@@ -177,6 +177,13 @@
     return wrap;
   }
 
+  function renderPrivateTab() {
+    const wrap = document.createElement("div");
+    wrap.appendChild(sectionHeader(PRIVATE_COLOR, "Private", PRIVATE_LINKS.length));
+    wrap.appendChild(grid("link-grid", PRIVATE_LINKS, l => linkCard(l, PRIVATE_COLOR, false)));
+    return wrap;
+  }
+
   function renderDirectoryTab() {
     const wrap = document.createElement("div");
 
@@ -241,6 +248,7 @@
     else if (activeTab === "education") container.appendChild(renderEducationTab());
     else if (activeTab === "brands") container.appendChild(renderBrandsTab());
     else if (activeTab === "directory") container.appendChild(renderDirectoryTab());
+    else if (activeTab === "private") container.appendChild(renderPrivateTab());
   }
 
   renderTabBar();

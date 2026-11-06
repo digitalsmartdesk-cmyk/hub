@@ -7,6 +7,7 @@ const TABS = [
   { id: "education",label: "Education" },
   { id: "brands",   label: "GrowthOriginator" },
   { id: "directory",label: "Directory" },
+  { id: "private",  label: "Private" },
 ];
 
 const DEFAULT_TAB = "brands";
@@ -138,6 +139,13 @@ const EDUCATION_LINKS = [
   { name: "Champskoo",       url: "https://champskoo.quizykoo.com",                          domain: "champskoo.quizykoo.com" },
   { name: "Filmykoo",        url: "https://filmykoo.quizykoo.com",                           domain: "filmykoo.quizykoo.com" },
   { name: "Digital",         url: "https://digital.quizykoo.com",                            domain: "digital.quizykoo.com" },
+];
+
+const PRIVATE_COLOR = "oklch(0.48 0.14 300)";
+const PRIVATE_LINKS = [
+  { name: "Task",    url: "https://claude.ai/artifact/UJ41rjpNUyqwiDcYhfdhLd", domain: "claude.ai/artifact/UJ41rjpN…" },
+  { name: "Money",   url: "https://claude.ai/artifact/K8jv2bo6pQRSbnHYMdBNdd", domain: "claude.ai/artifact/K8jv2bo6…" },
+  { name: "Writing", url: "https://claude.ai/artifact/JXRHkAzYX3HtXLjzTAWD6H", domain: "claude.ai/artifact/JXRHkAzY…" },
 ];
 
 const BRAND_CATEGORIES = [
