@@ -144,7 +144,7 @@ const EDUCATION_LINKS = [
 const PRIVATE_COLOR = "oklch(0.48 0.14 300)";
 const PRIVATE_LINKS = [
   { name: "Task",    url: "https://claude.ai/artifact/UJ41rjpNUyqwiDcYhfdhLd", domain: "claude.ai/artifact/UJ41rjpN…" },
-  { name: "Money",   url: "https://claude.ai/artifact/K8jv2bo6pQRSbnHYMdBNdd", domain: "claude.ai/artifact/K8jv2bo6…" },
+  { name: "Money",   url: "https://claude.ai/artifact/JtugJPqvTsXVBrEnfG26Yd", domain: "claude.ai/artifact/JtugJPqv…" },
   { name: "Writing", url: "https://claude.ai/artifact/JXRHkAzYX3HtXLjzTAWD6H", domain: "claude.ai/artifact/JXRHkAzY…" },
 ];
 
@@ -165,27 +165,45 @@ const BRAND_CATEGORIES = [
   {
     name: "Commerce & Business", color: "oklch(0.48 0.13 230)",
     links: [
-      { name: "Urban Supermart", url: "https://urbansupermart.growthoriginator.in", domain: "urbansupermart.growthoriginator.in" },
-      { name: "D2C Brands",      url: "https://d2cbrands.growthoriginator.in",      domain: "d2cbrands.growthoriginator.in" },
-      { name: "Brand Mesh",      url: "https://brandmesh.growthoriginator.in",      domain: "brandmesh.growthoriginator.in" },
-      { name: "Land Edge",       url: "https://landedge.growthoriginator.in",       domain: "landedge.growthoriginator.in" },
-      { name: "Bill Pay Box",    url: "https://billpaybox.growthoriginator.in",     domain: "billpaybox.growthoriginator.in" },
-      { name: "Artha Merge",     url: "https://arthamerge.growthoriginator.in",     domain: "arthamerge.growthoriginator.in" },
-      { name: "Heu Verticals",   url: "https://heuverticals.growthoriginator.in",   domain: "heuverticals.growthoriginator.in" },
-      { name: "Nexora",          url: "https://nexora.growthoriginator.in",         domain: "nexora.growthoriginator.in" },
-      { name: "Noyora",          url: "https://noyora.growthoriginator.in",         domain: "noyora.growthoriginator.in" },
-      { name: "Akash",           url: "https://akash.growthoriginator.in/",         domain: "akash.growthoriginator.in" },
+      { name: "Urban Supermart",  url: "https://urbansupermart.growthoriginator.in",  domain: "urbansupermart.growthoriginator.in" },
+      { name: "D2C Brands",       url: "https://d2cbrands.growthoriginator.in",       domain: "d2cbrands.growthoriginator.in" },
+      { name: "Brand Mesh",       url: "https://brandmesh.growthoriginator.in",       domain: "brandmesh.growthoriginator.in" },
+      { name: "Franchise Vista",  url: "https://franchisevista.growthoriginator.in",  domain: "franchisevista.growthoriginator.in" },
+      { name: "Heu Verticals",    url: "https://heuverticals.growthoriginator.in",    domain: "heuverticals.growthoriginator.in" },
+      { name: "Akash",            url: "https://akash.growthoriginator.in/",          domain: "akash.growthoriginator.in" },
+    ]
+  },
+  {
+    name: "Real Estate", color: "oklch(0.5 0.12 75)",
+    links: [
+      { name: "Land Edge",         url: "https://landedge.growthoriginator.in",          domain: "landedge.growthoriginator.in" },
+      { name: "Nirantar Vadodara", url: "https://nirantar-vadodara.growthoriginator.in", domain: "nirantar-vadodara.growthoriginator.in" },
+      { name: "Nirantar Vasudha",  url: "https://nirantarvasudha.growthoriginator.in",   domain: "nirantarvasudha.growthoriginator.in" },
+    ]
+  },
+  {
+    name: "Finance & Advisory", color: "oklch(0.5 0.12 195)",
+    links: [
+      { name: "Artha Merge",  url: "https://arthamerge.growthoriginator.in",  domain: "arthamerge.growthoriginator.in" },
+      { name: "Bill Pay Box", url: "https://billpaybox.growthoriginator.in",  domain: "billpaybox.growthoriginator.in" },
+    ]
+  },
+  {
+    name: "Tech & Energy", color: "oklch(0.48 0.15 290)",
+    links: [
+      { name: "Nexora", url: "https://nexora.growthoriginator.in", domain: "nexora.growthoriginator.in" },
+      { name: "Noyora", url: "https://noyora.growthoriginator.in", domain: "noyora.growthoriginator.in" },
     ]
   },
   {
     name: "Public Policy", color: "oklch(0.48 0.13 160)",
     links: [
-      { name: "Public Policy",              url: "https://publicpolicy.growthoriginator.in/",                           domain: "publicpolicy.growthoriginator.in" },
+      { name: "Public Policy",              url: "https://publicpolicy.growthoriginator.in/",                            domain: "publicpolicy.growthoriginator.in" },
       { name: "Rich Country Poor Citizens", url: "https://publicpolicy.growthoriginator.in/rich-country-poor-citizens/", domain: "publicpolicy.growthoriginator.in" },
-      { name: "AI Squeeze",                 url: "https://publicpolicy.growthoriginator.in/ai-squeeze/",                domain: "publicpolicy.growthoriginator.in" },
-      { name: "HH Bal Sheet — Book",        url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",           domain: "publicpolicy.growthoriginator.in" },
-      { name: "HH Bal Sheet — Tracker",     url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",        domain: "publicpolicy.growthoriginator.in" },
-      { name: "Money and Seats",            url: "https://publicpolicy.growthoriginator.in/money-and-seats/",           domain: "publicpolicy.growthoriginator.in" },
+      { name: "AI Squeeze",                 url: "https://publicpolicy.growthoriginator.in/ai-squeeze/",                 domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Book",        url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",            domain: "publicpolicy.growthoriginator.in" },
+      { name: "HH Bal Sheet — Tracker",     url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",         domain: "publicpolicy.growthoriginator.in" },
+      { name: "Money and Seats",            url: "https://publicpolicy.growthoriginator.in/money-and-seats/",            domain: "publicpolicy.growthoriginator.in" },
     ]
   },
   {
@@ -202,18 +220,18 @@ const BRAND_CATEGORIES = [
 ];
 
 const BRAND_SOCIAL = [
-  social("Quizykoo",           "https://www.facebook.com/quizykoo/",                       "Facebook"),
-  social("Urban Supermart",    "https://www.facebook.com/urbansupermart/",                  "Facebook"),
-  social("Urban Wholesale",    "https://www.facebook.com/urbanwholesaleindia/",             "Facebook"),
-  social("Noyora",             "https://www.facebook.com/noyoraofficial/",                  "Facebook"),
-  social("Cashout Property",   "https://www.facebook.com/cashoutproperty/",                 "Facebook"),
-  social("Umber Electric",     "https://www.facebook.com/umberelectric/",                   "Facebook"),
-  social("Envomoto",           "https://www.facebook.com/envomoto/",                        "Facebook"),
-  social("GrowthOriginator",   "https://www.facebook.com/profile.php?id=100064705879364",  "Facebook"),
-  social("Ignite Crest",       "https://www.facebook.com/ignitecrest/",                     "Facebook"),
-  social("Franchise Vista",    "https://www.facebook.com/franchisevista/",                   "Facebook"),
-  social("The Ignite Angels",  "https://www.facebook.com/theigniteangels/",                 "Facebook"),
-  social("Social Impact Vyoo", "https://www.youtube.com/@socialimpactvyoo",                 "YouTube"),
+  social("Quizykoo",           "https://www.facebook.com/quizykoo/",                      "Facebook"),
+  social("Urban Supermart",    "https://www.facebook.com/urbansupermart/",                 "Facebook"),
+  social("Urban Wholesale",    "https://www.facebook.com/urbanwholesaleindia/",            "Facebook"),
+  social("Noyora",             "https://www.facebook.com/noyoraofficial/",                 "Facebook"),
+  social("Cashout Property",   "https://www.facebook.com/cashoutproperty/",                "Facebook"),
+  social("Umber Electric",     "https://www.facebook.com/umberelectric/",                  "Facebook"),
+  social("Envomoto",           "https://www.facebook.com/envomoto/",                       "Facebook"),
+  social("GrowthOriginator",   "https://www.facebook.com/profile.php?id=100064705879364", "Facebook"),
+  social("Ignite Crest",       "https://www.facebook.com/ignitecrest/",                    "Facebook"),
+  social("Franchise Vista",    "https://www.facebook.com/franchisevista/",                  "Facebook"),
+  social("The Ignite Angels",  "https://www.facebook.com/theigniteangels/",                "Facebook"),
+  social("Social Impact Vyoo", "https://www.youtube.com/@socialimpactvyoo",                "YouTube"),
 ];
 
 const BRAND_EMAILS = ["landedge.projects@gmail.com", "arthamerge@gmail.com"];
