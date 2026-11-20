@@ -124,21 +124,35 @@ const PEOPLE = {
   },
 };
 
-const EDUCATION_COLOR = "oklch(0.5 0.13 262)";
-const EDUCATION_LINKS = [
-  { name: "Quizykoo",        url: "https://quizykoo.growthoriginator.in",                    domain: "quizykoo.growthoriginator.in" },
-  { name: "Quizykoo (Dev)",  url: "https://vrvgupta-dotcom.github.io/quizykoo/#about",       domain: "vrvgupta-dotcom.github.io" },
-  { name: "IMO Tracker App", url: "https://digitalsmartdesk-cmyk.github.io/imotrackerapp/",  domain: "digitalsmartdesk-cmyk.github.io" },
-  { name: "IMO Tracker",     url: "https://imotracker01.vercel.app/login?next=%2Ftests",     domain: "imotracker01.vercel.app" },
-  { name: "Quizykoo",        url: "https://quizykoo.com",                                    domain: "quizykoo.com" },
-  { name: "Quizykoo Online", url: "https://quizykoo.online",                                 domain: "quizykoo.online" },
-  { name: "Quiz Books",      url: "https://quizbooks.quizykoo.com",                          domain: "quizbooks.quizykoo.com" },
-  { name: "Skill Books",     url: "https://skillbooks.quizykoo.com",                         domain: "skillbooks.quizykoo.com" },
-  { name: "Mythokoo",        url: "https://mythokoo.quizykoo.com",                           domain: "mythokoo.quizykoo.com" },
-  { name: "Wonderkoo",       url: "https://wonderkoo.quizykoo.com",                          domain: "wonderkoo.quizykoo.com" },
-  { name: "Champskoo",       url: "https://champskoo.quizykoo.com",                          domain: "champskoo.quizykoo.com" },
-  { name: "Filmykoo",        url: "https://filmykoo.quizykoo.com",                           domain: "filmykoo.quizykoo.com" },
-  { name: "Digital",         url: "https://digital.quizykoo.com",                            domain: "digital.quizykoo.com" },
+const EDUCATION_SECTIONS = [
+  {
+    label: "Quizykoo Brands", color: "oklch(0.5 0.13 262)",
+    links: [
+      { name: "Quiz Books",  url: "https://quizbooks.quizykoo.com",   domain: "quizbooks.quizykoo.com" },
+      { name: "Skill Books", url: "https://skillbooks.quizykoo.com",  domain: "skillbooks.quizykoo.com" },
+      { name: "Mythokoo",    url: "https://mythokoo.quizykoo.com",    domain: "mythokoo.quizykoo.com" },
+      { name: "Wonderkoo",   url: "https://wonderkoo.quizykoo.com",   domain: "wonderkoo.quizykoo.com" },
+      { name: "Champskoo",   url: "https://champskoo.quizykoo.com",   domain: "champskoo.quizykoo.com" },
+      { name: "Filmykoo",    url: "https://filmykoo.quizykoo.com",    domain: "filmykoo.quizykoo.com" },
+      { name: "Digital",     url: "https://digital.quizykoo.com",     domain: "digital.quizykoo.com" },
+    ]
+  },
+  {
+    label: "Trackers", color: "oklch(0.5 0.12 190)",
+    links: [
+      { name: "IMO Tracker App", url: "https://digitalsmartdesk-cmyk.github.io/imotrackerapp/",  domain: "digitalsmartdesk-cmyk.github.io" },
+      { name: "IMO Tracker",     url: "https://imotracker01.vercel.app/login?next=%2Ftests",     domain: "imotracker01.vercel.app" },
+      { name: "Cadence",         url: "https://cadence-five-zeta.vercel.app/portrait",           domain: "cadence-five-zeta.vercel.app" },
+      { name: "Heu Verticals",   url: "https://heuverticals.growthoriginator.in",                domain: "heuverticals.growthoriginator.in" },
+    ]
+  },
+  {
+    label: "Quizykoo Sites", color: "oklch(0.5 0.14 310)",
+    links: [
+      { name: "Quizykoo (GO)",  url: "https://quizykoo.growthoriginator.in",              domain: "quizykoo.growthoriginator.in" },
+      { name: "Quizykoo (Dev)", url: "https://vrvgupta-dotcom.github.io/quizykoo/#about", domain: "vrvgupta-dotcom.github.io" },
+    ]
+  },
 ];
 
 const PRIVATE_COLOR = "oklch(0.48 0.14 300)";
@@ -160,17 +174,15 @@ const BRAND_CATEGORIES = [
       { name: "Tropico Nuts",   url: "https://tropiconuts.vercel.app/",           domain: "tropiconuts.vercel.app" },
       { name: "Cafe Firo",      url: "https://cafefiro.growthoriginator.in/",     domain: "cafefiro.growthoriginator.in" },
       { name: "Farm Puro",      url: "https://farmpuro.growthoriginator.in/",     domain: "farmpuro.growthoriginator.in" },
+      { name: "D2C Brands",     url: "https://d2cbrands.growthoriginator.in",     domain: "d2cbrands.growthoriginator.in" },
     ]
   },
   {
-    name: "Commerce & Business", color: "oklch(0.48 0.13 230)",
+    name: "Commerce", color: "oklch(0.48 0.13 230)",
     links: [
-      { name: "Urban Supermart",  url: "https://urbansupermart.growthoriginator.in",  domain: "urbansupermart.growthoriginator.in" },
-      { name: "D2C Brands",       url: "https://d2cbrands.growthoriginator.in",       domain: "d2cbrands.growthoriginator.in" },
-      { name: "Brand Mesh",       url: "https://brandmesh.growthoriginator.in",       domain: "brandmesh.growthoriginator.in" },
-      { name: "Franchise Vista",  url: "https://franchisevista.growthoriginator.in",  domain: "franchisevista.growthoriginator.in" },
-      { name: "Heu Verticals",    url: "https://heuverticals.growthoriginator.in",    domain: "heuverticals.growthoriginator.in" },
-      { name: "Akash",            url: "https://akash.growthoriginator.in/",          domain: "akash.growthoriginator.in" },
+      { name: "Urban Supermart", url: "https://urbansupermart.growthoriginator.in", domain: "urbansupermart.growthoriginator.in" },
+      { name: "Bill Pay Box",    url: "https://billpaybox.growthoriginator.in",     domain: "billpaybox.growthoriginator.in" },
+      { name: "Books",           url: "https://booksurl.growthoriginator.in",       domain: "booksurl.growthoriginator.in" },
     ]
   },
   {
@@ -182,10 +194,12 @@ const BRAND_CATEGORIES = [
     ]
   },
   {
-    name: "Finance & Advisory", color: "oklch(0.5 0.12 195)",
+    name: "Consulting", color: "oklch(0.5 0.12 195)",
     links: [
-      { name: "Artha Merge",  url: "https://arthamerge.growthoriginator.in",  domain: "arthamerge.growthoriginator.in" },
-      { name: "Bill Pay Box", url: "https://billpaybox.growthoriginator.in",  domain: "billpaybox.growthoriginator.in" },
+      { name: "Artha Merge",    url: "https://arthamerge.growthoriginator.in",    domain: "arthamerge.growthoriginator.in" },
+      { name: "Brand Mesh",     url: "https://brandmesh.growthoriginator.in",     domain: "brandmesh.growthoriginator.in" },
+      { name: "Franchise Vista",url: "https://franchisevista.growthoriginator.in",domain: "franchisevista.growthoriginator.in" },
+      { name: "Medhavant",      url: "https://medhavant.growthoriginator.in",     domain: "medhavant.growthoriginator.in" },
     ]
   },
   {
@@ -209,12 +223,17 @@ const BRAND_CATEGORIES = [
   {
     name: "Lifestyle & Fashion", color: "oklch(0.52 0.15 15)",
     links: [
-      { name: "Wedding Pass", url: "https://weddingpass.growthoriginator.in",       domain: "weddingpass.growthoriginator.in" },
-      { name: "Cadence",      url: "https://cadence-five-zeta.vercel.app/portrait", domain: "cadence-five-zeta.vercel.app" },
-      { name: "Navsaaj",      url: "https://navsaaj.growthoriginator.in/",          domain: "navsaaj.growthoriginator.in" },
-      { name: "Rupanya",      url: "https://rupanya.growthoriginator.in/",          domain: "rupanya.growthoriginator.in" },
-      { name: "Lalitya",      url: "https://lalitya.growthoriginator.in/",          domain: "lalitya.growthoriginator.in" },
-      { name: "Blush Layers", url: "https://blushlayers.growthoriginator.in/",      domain: "blushlayers.growthoriginator.in" },
+      { name: "Wedding Pass", url: "https://weddingpass.growthoriginator.in",  domain: "weddingpass.growthoriginator.in" },
+      { name: "Navsaaj",      url: "https://navsaaj.growthoriginator.in/",     domain: "navsaaj.growthoriginator.in" },
+      { name: "Rupanya",      url: "https://rupanya.growthoriginator.in/",     domain: "rupanya.growthoriginator.in" },
+      { name: "Lalitya",      url: "https://lalitya.growthoriginator.in/",     domain: "lalitya.growthoriginator.in" },
+      { name: "Blush Layers", url: "https://blushlayers.growthoriginator.in/", domain: "blushlayers.growthoriginator.in" },
+    ]
+  },
+  {
+    name: "Profile", color: "oklch(0.5 0.13 335)",
+    links: [
+      { name: "Akash", url: "https://akash.growthoriginator.in/", domain: "akash.growthoriginator.in" },
     ]
   },
 ];
@@ -234,7 +253,15 @@ const BRAND_SOCIAL = [
   social("Social Impact Vyoo", "https://www.youtube.com/@socialimpactvyoo",                "YouTube"),
 ];
 
-const BRAND_EMAILS = ["landedge.projects@gmail.com", "arthamerge@gmail.com"];
+const BRAND_EMAILS = [
+  "landedge.projects@gmail.com",
+  "arthamerge@gmail.com",
+  "franchisevista@growthoriginator.in",
+  "brandmesh@growthoriginator.in",
+  "nv@growthoriginator.in",
+  "publicpolicyfoundation@gmail.com",
+  "medhavant@growthoriginator.in",
+];
 
 const DOMAINS = [
   { name: "growthoriginator.in", url: "https://growthoriginator.in" },
@@ -248,12 +275,17 @@ const DOMAINS = [
 ];
 
 const ALL_EMAILS = [
-  { label: "Yatendra Chandra",         email: "yatendra.chandra@gmail.com" },
-  { label: "Vikas Gupta — Fault Line", email: "faultlineideas@gmail.com" },
-  { label: "Vikas Gupta — Equicore",   email: "equicorepractice@gmail.com" },
-  { label: "Anant Deodar",             email: "anant.deodar@gmail.com" },
-  { label: "Shloka Svara",             email: "shloka.svara@gmail.com" },
-  { label: "Soulvani Music",           email: "soulvani.music@gmail.com" },
-  { label: "Land Edge",                email: "landedge.projects@gmail.com" },
-  { label: "Artha Merge",              email: "arthamerge@gmail.com" },
+  { label: "Yatendra Chandra",             email: "yatendra.chandra@gmail.com" },
+  { label: "Vikas Gupta — Fault Line",     email: "faultlineideas@gmail.com" },
+  { label: "Vikas Gupta — Equicore",       email: "equicorepractice@gmail.com" },
+  { label: "Anant Deodar",                 email: "anant.deodar@gmail.com" },
+  { label: "Shloka Svara",                 email: "shloka.svara@gmail.com" },
+  { label: "Soulvani Music",               email: "soulvani.music@gmail.com" },
+  { label: "Land Edge",                    email: "landedge.projects@gmail.com" },
+  { label: "Artha Merge",                  email: "arthamerge@gmail.com" },
+  { label: "Franchise Vista",              email: "franchisevista@growthoriginator.in" },
+  { label: "Brand Mesh",                   email: "brandmesh@growthoriginator.in" },
+  { label: "Nirantar Vasudha",             email: "nv@growthoriginator.in" },
+  { label: "Public Policy Foundation",     email: "publicpolicyfoundation@gmail.com" },
+  { label: "Medhavant",                    email: "medhavant@growthoriginator.in" },
 ];

@@ -144,8 +144,12 @@
 
   function renderEducationTab() {
     const wrap = document.createElement("div");
-    wrap.appendChild(sectionHeader(EDUCATION_COLOR, "Quizykoo & Education", EDUCATION_LINKS.length));
-    wrap.appendChild(grid("link-grid", EDUCATION_LINKS, l => linkCard(l, EDUCATION_COLOR, false)));
+    for (const sec of EDUCATION_SECTIONS) {
+      const div = el("div", "category");
+      div.appendChild(sectionHeader(sec.color, sec.label, sec.links.length));
+      div.appendChild(grid("link-grid", sec.links, l => linkCard(l, sec.color, false)));
+      wrap.appendChild(div);
+    }
     return wrap;
   }
 
