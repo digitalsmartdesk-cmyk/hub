@@ -149,8 +149,9 @@ const EDUCATION_SECTIONS = [
   {
     label: "Quizykoo Sites", color: "oklch(0.5 0.14 310)",
     links: [
-      { name: "Quizykoo (GO)",  url: "https://quizykoo.growthoriginator.in",              domain: "quizykoo.growthoriginator.in" },
-      { name: "Quizykoo (Dev)", url: "https://vrvgupta-dotcom.github.io/quizykoo/#about", domain: "vrvgupta-dotcom.github.io" },
+      { name: "Quizykoo (Home)", url: "https://home.quizykoo.com",                         domain: "home.quizykoo.com" },
+      { name: "Quizykoo (GO)",   url: "https://quizykoo.growthoriginator.in",              domain: "quizykoo.growthoriginator.in" },
+      { name: "Quizykoo (Dev)",  url: "https://vrvgupta-dotcom.github.io/quizykoo/#about", domain: "vrvgupta-dotcom.github.io" },
     ]
   },
 ];
@@ -218,6 +219,14 @@ const BRAND_CATEGORIES = [
       { name: "HH Bal Sheet — Book",        url: "https://publicpolicy.growthoriginator.in/hhbalsheet/book/",            domain: "publicpolicy.growthoriginator.in" },
       { name: "HH Bal Sheet — Tracker",     url: "https://publicpolicy.growthoriginator.in/hhbalsheet/tracker/",         domain: "publicpolicy.growthoriginator.in" },
       { name: "Money and Seats",            url: "https://publicpolicy.growthoriginator.in/money-and-seats/",            domain: "publicpolicy.growthoriginator.in" },
+      { name: "IDRC",                       url: "https://idrc.growthoriginator.in",                                       domain: "idrc.growthoriginator.in" },
+    ]
+  },
+  {
+    name: "Outreach", color: "oklch(0.5 0.13 120)",
+    links: [
+      { name: "Anarva Atelier", url: "https://anarvaatelier.growthoriginator.in",  domain: "anarvaatelier.growthoriginator.in" },
+      { name: "Resonant House", url: "https://resonanthouse.growthoriginator.in",  domain: "resonanthouse.growthoriginator.in" },
     ]
   },
   {
@@ -261,6 +270,7 @@ const BRAND_EMAILS = [
   "nv@growthoriginator.in",
   "publicpolicyfoundation@gmail.com",
   "medhavant@growthoriginator.in",
+  "quizykoo@gmail.com",
 ];
 
 const DOMAINS = [
@@ -288,4 +298,5 @@ const ALL_EMAILS = [
   { label: "Nirantar Vasudha",             email: "nv@growthoriginator.in" },
   { label: "Public Policy Foundation",     email: "publicpolicyfoundation@gmail.com" },
   { label: "Medhavant",                    email: "medhavant@growthoriginator.in" },
+  { label: "Quizykoo",                     email: "quizykoo@gmail.com" },
 ];
